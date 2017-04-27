@@ -1,14 +1,12 @@
-<img class="img-responsive" src="<%=@city.image_url%>" alt="">
+<img class="img-responsive" src="<%= @city.image_url %>" alt="">
 <div class="container">
-  <%= link_to "New Post", new_city_post_path(@city), class: "btn btn-primary pull-right" %>
-    <% @posts.each do |post| %>
+    <% @posts.reverse_each do |post| %>
     <div class="row">
-      <div class="col-xs-3">
-        <img src="<%= post.user.image_url %>" class="img-responsive img-rounded" alt="">
-        <p><%= post.user.email %></p>
+      <div class="col-sm-3 hidden-xs">
+        <img src="<%= post.user.image_url %>" class="img-responsive img-rounded city-show-portraits" alt="">
       </div>
-      <div class="col-xs-9">
-        <h2><%= post.title %></h2>
+      <div class="col-sm-9">
+        <h2><%= link_to post.title, city_post_path(post.city, post) %></h2>
         <p><%= post.content %></p>
       </div>
     </div>
