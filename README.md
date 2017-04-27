@@ -23,3 +23,15 @@ NOTE: Ruby (2.4.1), Rails (5.0.2), and PostgreSQL all must be installed
 - User authentication by [Devise](https://github.com/plataformatec/devise)
 - Responsive design by [Bootstrap](http://getbootstrap.com/)
 - Sandstone bootstrap theme by [Bootswatch](http://bootswatch.com/)
+
+
+## ERD
+
+![Imbible ERD](https://i.imgur.com/ZOHBqeK.png)
+
+## User Stories
+
+[Trello Board](https://trello.com/b/vZnsWDle/wdi-project-four-vagabond)
+
+-  
+
