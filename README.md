@@ -1,25 +1,25 @@
-# README
+# 🌆 [City Tips](https://city-tips.herokuapp.com/)
+A Ruby on Rails app where users can view and leave tips for their favorite cities.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Getting Started
+NOTE: Ruby (2.4.1), Rails (5.0.2), and PostgreSQL all must be installed
 
-Things you may want to cover:
+1. Clone this repo
+2. Enter `bundle install`
+3. Enter `rails s`
+4. Visit localhost:3000 
 
-* Ruby version
+## Features
+- Users can sign up and sign in
+- Users can view a list of cities
+- Users can visit a page for a specific city
+- Users can view tips for specific cities
+- Users can create their own tips for specific cities
+- Users can edit and delete their tips
+- Users can edit and delete their accounts
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# vagabond
+## Technologies
+- Server side rendering via Ruby on Rails backend
+- User authentication by [Devise](https://github.com/plataformatec/devise)
+- Responsive design by [Bootstrap](http://getbootstrap.com/)
+- Sandstone bootstrap theme by [Bootswatch](http://bootswatch.com/)
