@@ -1,10 +1,4 @@
 Rails.application.routes.draw do
-  get 'users/show'
-
-  get 'posts/index'
-
-  get 'posts/show'
-
   devise_for :users
   get '/' => 'cities#index'
 
