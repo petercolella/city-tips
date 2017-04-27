@@ -15,7 +15,7 @@ City.create(
 
 City.create(
   name: 'London',
-  image_url: 'http://i.dailymail.co.uk/i/pix/2016/09/28/10/38DF52A200000578-3811323-image-m-9_1475054187533.jpg',
+  image_url: 'http://www.pokerstarslive.com/assets/common/images/page-headers/festival-london.jpg',
 )
 
 City.create(
