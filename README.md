@@ -27,11 +27,11 @@ NOTE: Ruby (2.4.1), Rails (5.0.2), and PostgreSQL all must be installed
 
 ## ERD
 
-![Imbible ERD]()
+![Imbible ERD](https://i.imgur.com/ZOHBqeK.png)
 
 ## User Stories
 
-[Trello Board]()
+[Trello Board](https://trello.com/b/vZnsWDle/wdi-project-four-vagabond)
 
 -  
 
