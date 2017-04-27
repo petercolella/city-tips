@@ -1,4 +1,18 @@
 <img class="img-responsive" src="<%=@city.image_url%>" alt="">
 <div class="container">
+  <%= link_to "New Post", new_city_post_path(@city), class: "btn btn-primary pull-right" %>
+  <!-- <button class="pull-right btn btn-primary">New Post</button> -->
   <h1><%= @city.name %></h1>
+  <div class="jumbotron">
+    <div class="row">
+      <div class="col-xs-3">
+        <img src="https://avatars0.githubusercontent.com/u/24421398?v=3&s=460" class="img-responsive img-rounded" alt="">
+        <p>Peter</p>
+      </div>
+      <div class="col-xs-9">
+        <h2>example post</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe officiis dolores in architecto eaque recusandae excepturi voluptatibus exercitationem iusto qui explicabo nemo accusantium, perferendis tempore fugiat beatae modi consectetur repellat!</p>
+      </div>
+    </div>
+  </div>
 </div>
