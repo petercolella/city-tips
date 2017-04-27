@@ -33,6 +33,12 @@
     </nav>
     <img class="img-responsive" src="http://www.layoverguide.com/wp-content/uploads/2009/03/Miami-city-skyline.jpg" alt="">
     <div class="container">
+      <% if notice %>
+      	<p class="alert alert-success"><%= notice %></p>
+      <% end %>
+      <% if alert %>
+      	<p class="alert alert-danger"><%= alert %></p>
+      <% end %>
       <%= yield %>
     </div>
     <footer class="footer">
