@@ -3,6 +3,9 @@ class PostsController < ApplicationController
   end
 
   def show
+    @post = Post.find(params[:id])
+    @author = User.find(@post.user_id)
+    @city = City.find(@post.city_id)
   end
 
   def new
@@ -13,7 +16,7 @@ class PostsController < ApplicationController
   def create
     binding.pry
     post = Post.create(post_params)
-    redirect_to city_path(params[:city_id])
+    redirect_to city_post_path(params[:city_id])
   end
 
   private
