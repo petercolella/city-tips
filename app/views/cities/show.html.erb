@@ -1,15 +1,11 @@
-<img class="img-responsive" src="<%= @city.image_url %>" alt="">
-<div class="container">
-    <% @posts.reverse_each do |post| %>
-    <div class="row">
-      <div class="col-sm-3 hidden-xs">
-        <img src="<%= post.user.image_url %>" class="img-responsive img-rounded city-show-portraits" alt="">
-      </div>
-      <div class="col-sm-9">
-        <h2><%= link_to post.title, city_post_path(post.city, post) %></h2>
-        <p><%= post.content %></p>
-      </div>
+<% @posts.reverse_each do |post| %>
+  <div class="row">
+    <div class="col-sm-3 hidden-xs">
+      <img src="<%= post.user.image_url %>" class="img-responsive img-rounded city-show-portraits" alt="">
     </div>
-    <% end %>
-
+    <div class="col-sm-9">
+      <h2><%= link_to post.title, city_post_path(post.city, post) %></h2>
+      <p><%= post.content %></p>
+    </div>
   </div>
+<% end %>

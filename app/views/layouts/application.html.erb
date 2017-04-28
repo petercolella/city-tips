@@ -43,13 +43,20 @@
         </div><!--/.nav-collapse -->
       </div>
     </nav>
-      <!-- <% if notice %>
-      	<p class="alert alert-success message"><%= notice %></p>
+      <% if @city %>
+        <img class="img-responsive banner-img" src="<%=@city.image_url%>" alt="">
+      <% else %>
+        <img class="img-responsive banner-img" src="http://www.layoverguide.com/wp-content/uploads/2009/03/Miami-city-skyline.jpg" alt="">
       <% end %>
-      <% if alert %>
-      	<p class="alert alert-danger message"><%= alert %></p>
-      <% end %> -->
-      <%= yield %>
+      <div class="container">
+        <% if notice %>
+        	<p class="alert alert-success message"><%= notice %></p>
+        <% end %>
+        <% if alert %>
+        	<p class="alert alert-danger message"><%= alert %></p>
+        <% end %>
+        <%= yield %>
+      </div>
     <footer class="footer">
       <div class="container">
         <p class="text-muted">Created by: Harry Karambizi, Neil Morris, Peter Colella, and Ray Meibaum</p>

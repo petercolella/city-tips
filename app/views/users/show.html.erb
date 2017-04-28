@@ -1,19 +1,16 @@
-<img class="img-responsive" src="http://www.layoverguide.com/wp-content/uploads/2009/03/Miami-city-skyline.jpg" alt="">
-<div class="container">
-  <div class="row">
-    <div class="col-sm-4">
-      <img class="img-responsive img-rounded hidden-xs" src="<%= @user.image_url %>" alt="">
-      <h3><%= @user.full_name %></h3>
-      <h3>Joined: <%= @user.created_at.strftime("%x") %></h3>
-      <h3>Current City: <%= @user.current_city %></h3>
-    </div>
-    <div class="col-sm-8">
-      <% @posts.reverse_each do |post| %>
-        <div class="post">
-          <h2><%= link_to post.title, city_post_path(post.city, post) %></h2>
-          <p><%= post.content %></p>
-        </div>
-      <% end %>
-    </div>
+<div class="row">
+  <div class="col-sm-4">
+    <img class="img-responsive img-rounded hidden-xs" src="<%= @user.image_url %>" alt="">
+    <h3><%= @user.full_name %></h3>
+    <h3>Joined: <%= @user.created_at.strftime("%x") %></h3>
+    <h3>Current City: <%= @user.current_city %></h3>
+  </div>
+  <div class="col-sm-8">
+    <% @posts.reverse_each do |post| %>
+      <div class="post">
+        <h2><%= link_to post.title, city_post_path(post.city, post) %></h2>
+        <p><%= post.content %></p>
+      </div>
+    <% end %>
   </div>
 </div>

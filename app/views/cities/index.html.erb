@@ -1,9 +1,6 @@
-<img class="img-responsive" src="http://www.layoverguide.com/wp-content/uploads/2009/03/Miami-city-skyline.jpg" alt="">
-<div class="container">
-  <ul>
-    <h1>Cities Index</h1>
-    <% @cities.each do |city| %>
+<h1>Cities Index</h1>
+<ul>
+  <% @cities.each do |city| %>
     <li><%= link_to city.name, city_path(city) %></li>
-    <% end %>
-  </ul>
-</div>
+  <% end %>
+</ul>
