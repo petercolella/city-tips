@@ -9,7 +9,11 @@
   <div class="col-sm-8">
     <% @posts.reverse_each do |post| %>
       <div class="post">
-        <h2><%= link_to post.title, city_post_path(post.city, post) %></h2>
+        <h1>
+          <%= link_to post.title, city_post_path(post.city, post) %> <br>
+          <small>posted in <%= link_to post.city.name, city_path(post.city) %> <%= time_ago_in_words(post.created_at)%> ago</small>
+        </h1>
+
         <p><%= truncate(post.content, length: 1000) %></p>
         <%= link_to icon('pencil', class: "fa-3x"), edit_city_post_path(post.city, post) %>
         <%= link_to icon('trash-o', class: "fa-3x"), city_post_path(post.city, post), :data => {:confirm => "Are you sure you want to delete #{post.title}?"}, :method => 'delete' %>
