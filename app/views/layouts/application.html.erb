@@ -23,7 +23,7 @@
           </button>
           <%= link_to "City Tips", root_path, class: "navbar-brand" %>
           <% if @city %>
-            <p class="navbar-text"><%= @city.name %></p>
+            <p class="navbar-text"><%= link_to @city.name, city_path(@city.id) %></p>
           <% end %>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
