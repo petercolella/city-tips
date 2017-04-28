@@ -6,7 +6,7 @@
   </div>
   <div class="col-sm-9">
     <h1><%= @post.title %> <br>
-      <small>by <%= @author.full_name %>, <%= time_ago_in_words(@post.created_at)%> ago.</small>
+      <small>by <%= link_to @author.full_name, user_path(@author) %>, <%= time_ago_in_words(@post.created_at)%> ago.</small>
     </h1>
     <p>
       <%= @post.content %> <br>
