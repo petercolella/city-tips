@@ -1,7 +1,6 @@
 class PostsController < ApplicationController
-  def index
-  end
-
+  before_action :authenticate_user!, only: [:new, :create]
+  before_action :redirect_unless_owner, only: [:edit, :update, :destroy]
   def show
     @post = Post.find(params[:id])
     @author = @post.user
@@ -42,5 +41,12 @@ class PostsController < ApplicationController
     params.require(:post)
       .permit(:title, :content)
       .merge(user_id: current_user.id, city_id: params[:city_id])
+  end
+
+  def redirect_unless_owner
+    post = Post.find(params[:id])
+    if (current_user.id != post.user.id)
+      redirect_to root_path
+    end
   end
 end
