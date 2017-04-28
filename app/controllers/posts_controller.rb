@@ -13,15 +13,50 @@ class PostsController < ApplicationController
   end
 
   def create
-    post = Post.create(post_params)
-    city = post.city
-    redirect_to city_post_path(city, post)
+    @post = Post.new(post_params)
+    @city = @post.city
+    if @post.save
+      redirect_to city_post_path(@city, @post), notice: 'Post created successfully.'
+    else
+      render :new, notice: 'Error creating post.'
+    end
   end
 
   def edit
     @post = Post.find(params[:id])
     @city = @post.city
   end
+
+  # # POST /notes
+  # def create
+  #   @note = Note.new(note_params)
+  #
+  #   if @note.save
+  #     redirect_to @note, notice: 'Note was successfully created.'
+  #   else
+  #     render :new
+  #   end
+  # end
+  #
+  # # PATCH/PUT /notes/1
+  # def update
+  #   @note = current_user.notes.find(params[:id])
+  #
+  #   if @note.update(note_params)
+  #     redirect_to @note, notice: 'Note was successfully updated.'
+  #   else
+  #     render :edit
+  #   end
+  # end
+  #
+  # # DELETE /notes/1
+  # def destroy
+  #   @note = current_user.notes.find(params[:id])
+  #
+  #   @note.destroy
+  #
+  #   redirect_to notes_url, notice: 'Note was successfully destroyed.'
+  # end
 
   def update
     post = Post.find(params[:id])
