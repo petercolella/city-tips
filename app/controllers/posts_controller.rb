@@ -19,6 +19,23 @@ class PostsController < ApplicationController
     redirect_to city_post_path(city, post)
   end
 
+  def edit
+    @post = Post.find(params[:id])
+    @city = @post.city
+  end
+
+  def update
+    post = Post.find(params[:id])
+    post.update(post_params)
+    redirect_to city_post_path(post.city, post)
+  end
+
+  def destroy
+    post = Post.find(params[:id])
+    post.destroy
+    redirect_to user_path(current_user)
+  end
+
   private
 
   def post_params
