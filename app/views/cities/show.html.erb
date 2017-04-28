@@ -6,7 +6,7 @@
     <div class="col-sm-9">
       <h1>
         <%= link_to post.title, city_post_path(post.city, post) %> <br>
-        <small>by <%= post.user.full_name %>, <%= time_ago_in_words(post.created_at)%> ago.</small>
+        <small>by <%=link_to post.user.full_name, user_path(post.user) %>, <%= time_ago_in_words(post.created_at)%> ago.</small>
       </h1>
       <p><%= truncate(post.content, length: 1000) %></p>
     </div>

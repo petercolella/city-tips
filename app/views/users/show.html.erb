@@ -4,7 +4,7 @@
     <h3><%= @user.full_name %></h3>
     <h3>Joined: <%= @user.created_at.strftime("%x") %></h3>
     <h3>Current City: <%= @user.current_city %></h3>
-    <%= link_to "Edit Profile", edit_user_path(@user.id), class: "btn btn-warning"%>
+    <%= link_to "Edit Profile", edit_user_registration_path, class: "btn btn-warning"%>
   </div>
   <div class="col-sm-8">
     <% @posts.reverse_each do |post| %>
@@ -15,8 +15,10 @@
         </h1>
 
         <p><%= truncate(post.content, length: 1000) %></p>
-        <%= link_to icon('pencil', class: "fa-3x"), edit_city_post_path(post.city, post) %>
-        <%= link_to icon('trash-o', class: "fa-3x"), city_post_path(post.city, post), :data => {:confirm => "Are you sure you want to delete #{post.title}?"}, :method => 'delete' %>
+        <% if current_user == post.user %>
+          <%= link_to icon('pencil', class: "fa-3x"), edit_city_post_path(post.city, post) %>
+          <%= link_to icon('trash-o', class: "fa-3x"), city_post_path(post.city, post), :data => {:confirm => "Are you sure you want to delete #{post.title}?"}, :method => 'delete' %>
+        <% end %>
       </div>
     <% end %>
   </div>
