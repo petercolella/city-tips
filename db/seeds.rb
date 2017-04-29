@@ -10,7 +10,7 @@ Post.destroy_all
 
 City.create(
   name: 'Atlanta',
-  image_url: 'https://en.wikipedia.org/wiki/Atlanta#/media/File:Atlanta_Downtown_Skyline.jpg',
+  image_url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Atlanta_Downtown_Skyline.jpg/1920px-Atlanta_Downtown_Skyline.jpg',
 )
 
 City.create(
