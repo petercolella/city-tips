@@ -10,7 +10,7 @@ Post.destroy_all
 
 City.create(
   name: 'Atlanta',
-  image_url: 'http://howafrica.com/wp-content/uploads/2015/11/0x600.jpg',
+  image_url: 'https://en.wikipedia.org/wiki/Atlanta#/media/File:Atlanta_Downtown_Skyline.jpg',
 )
 
 City.create(
@@ -20,5 +20,5 @@ City.create(
 
 City.create(
   name: 'San Francisco',
-  image_url: 'https://d1udkpklcxvaqz.cloudfront.net/sites/default/files/styles/img-venue-slider-home/public/sf-slider-1.jpg?itok=aDIO_Atb',
+  image_url: 'http://cdn.lightgalleries.net/4bd5ebf463380/images/pano20-ship-final2-1.jpg',
 )
