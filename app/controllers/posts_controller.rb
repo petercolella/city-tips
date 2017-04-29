@@ -18,7 +18,9 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to city_post_path(@city, @post), notice: 'Post created successfully.'
     else
-      render :new, notice: 'Error creating post.'
+      flash[:alert] = @post.errors.full_messages.join(", ")
+      # binding.pry
+      render :new
     end
   end
 
