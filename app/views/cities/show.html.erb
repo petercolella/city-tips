@@ -1,5 +1,5 @@
 <% if @posts.empty? %>
-  <h1>There are no tips for <%= @city.name %>. <%= link_to "Add tip?", new_city_post_path(@city) %></h1>
+  <h1>There are no tips for <%= @city.name %>. <%= link_to "Add tip", new_city_post_path(@city) %>?</h1>
 <% else %>
   <% @posts.reverse_each do |post| %>
     <div class="row">
@@ -15,4 +15,9 @@
       </div>
     </div>
   <% end %>
+  <div class="row">
+    <div class="col-sm-9 col-sm-offset-3">
+      <h1>Have a tip? <%= link_to "Add it", new_city_post_path(@city)%>!</h1>
+    </div>
+  </div>
 <% end %>
