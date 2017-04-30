@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_action :redirect_unless_owner, only: [:edit, :update, :destroy]
   def show
     @post = Post.find(params[:id])
-    @author = @post.user
+    @user = @post.user
     @city = @post.city
   end
 
