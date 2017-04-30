@@ -7,13 +7,4 @@ class CitiesController < ApplicationController
     @city = City.find(params[:id])
     @posts = @city.posts
   end
-  #
-  # def create
-  # end
-  #
-  # def update
-  # end
-  #
-  # def delete
-  # end
 end
