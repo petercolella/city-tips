@@ -2,6 +2,8 @@
 <p class="lead">A site for creating and viewing tips for your favorite cities.</p>
 <strong>Feel free to:</strong>
 <ul>
-  <li><%= link_to "log in", new_user_session_path %> or <%= link_to "sign up", new_user_registration_path %> </li>
-  <li>view the <%= link_to "cities index", cities_path %></li>
+  <% if !current_user %>
+    <li><%= link_to "log in", new_user_session_path %> or <%= link_to "sign up", new_user_registration_path %> </li>
+  <% end%>
+  <li>view the <%= link_to "available cities", cities_path %></li>
 </ul>
