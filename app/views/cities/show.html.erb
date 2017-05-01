@@ -1,23 +1,24 @@
+<div class="jumbotron">
+  <h1 class="text-center"><%= @city.name %></h1>
+</div>
 <% if @posts.empty? %>
-  <h1>There are no tips for <%= @city.name %>. <%= link_to "Add tip", new_city_post_path(@city) %>?</h1>
+  <h3>There are no tips for <%= @city.name %>. <%= link_to "Add tip", new_city_post_path(@city) %>?</h3>
 <% else %>
   <% @posts.reverse_each do |post| %>
+  <div class="jumbotron">
     <div class="row">
       <div class="col-sm-3 hidden-xs">
         <img src="<%= post.user.image_url %>" class="img-responsive img-rounded portrait" alt="">
       </div>
       <div class="col-sm-9">
-        <h1>
+        <h2>
           <%= link_to post.title, city_post_path(post.city, post) %> <br>
           <small>by <%=link_to post.user.full_name, user_path(post.user) %>, <%= time_ago_in_words(post.created_at)%> ago.</small>
-        </h1>
+        </h2>
         <p><%= truncate(post.content, length: 1000) %></p>
       </div>
     </div>
-  <% end %>
-  <div class="row">
-    <div class="col-sm-9 col-sm-offset-3">
-      <h1>Have a tip? <%= link_to "Add it", new_city_post_path(@city)%>!</h1>
-    </div>
   </div>
+  <% end %>
+  <h1 class="text-center">Have a tip? <%= link_to "Add it", new_city_post_path(@city)%>!</h1>
 <% end %>
