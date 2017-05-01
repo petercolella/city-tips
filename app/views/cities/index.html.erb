@@ -2,6 +2,6 @@
 <% @cities.each do |city| %>
   <div class="jumbotron">
     <img class="img-responsive img-rounded" src="<%= city.image_url %>" alt="">
-    <h3 class="text-center"><%= link_to city.name, city_path(city) %></h3>
+    <h2 class="text-center"><%= link_to city.name, city_path(city) %></h2>
   </div>
 <% end %>
