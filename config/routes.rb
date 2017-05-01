@@ -3,10 +3,9 @@ Rails.application.routes.draw do
 	registrations: 'users/registrations'
 }
 
-  root to: "cities#index"
+  root to: "static_pages#welcome"
 
   resources :users
-
   resources :cities do
     resources :posts
   end
