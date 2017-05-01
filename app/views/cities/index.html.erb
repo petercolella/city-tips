@@ -1,6 +1,7 @@
-<h1>Cities Index</h1>
-<ul>
-  <% @cities.each do |city| %>
-    <li><%= link_to city.name, city_path(city) %></li>
-  <% end %>
-</ul>
+<h1>Cities</h1>
+<% @cities.each do |city| %>
+  <div class="jumbotron">
+    <img class="img-responsive img-rounded" src="<%= city.image_url %>" alt="">
+    <h3 class="text-center"><%= link_to city.name, city_path(city) %></h3>
+  </div>
+<% end %>
