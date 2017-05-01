@@ -1,4 +1,4 @@
-# 🌆 [City Tips](https://city-tips.herokuapp.com/)
+#🌆 [City Tips](https://city-tips.herokuapp.com/)
 A Ruby on Rails app where users can view and leave tips for their favorite cities.
 
 ## Getting Started
@@ -26,12 +26,13 @@ NOTE: Ruby (2.4.1), Rails (5.0.2), and PostgreSQL all must be installed
 
 
 ## ERD
+![ERD](https://i.imgur.com/ZOHBqeK.png)
 
-![Imbible ERD](https://i.imgur.com/ZOHBqeK.png)
+##Wireframes
+![Wireframes](https://raw.githubusercontent.com/ATL-WDI-Exercises/project-vagabond/master/wireframes.png)
 
 ## User Stories
+[User Stories](https://trello.com/b/vZnsWDle/wdi-project-four-vagabond)
 
-[Trello Board](https://trello.com/b/vZnsWDle/wdi-project-four-vagabond)
-
--  
-
+##Slide Deck
+[Slide Deck](https://docs.google.com/presentation/d/1MnLJ5WgwtbZ2kbkM8AsXiQ3LUOEBeCzux5ep3OBykjU/edit?usp=sharing)
